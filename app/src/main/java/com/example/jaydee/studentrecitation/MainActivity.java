@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Under Development", Snackbar.LENGTH_SHORT)
+                        .show();
             }
         });
 
@@ -110,12 +110,14 @@ public class MainActivity extends AppCompatActivity
             Toast toast = Toast.makeText(this, "Under Development", Toast.LENGTH_SHORT);
             toast.show();
         } else if (id == R.id.nav_history) {
-            Toast toast = Toast.makeText(this, "Under Development", Toast.LENGTH_SHORT);
-            toast.show();
+            View view = findViewById(R.id.fab);
+            Snackbar.make(view, "Under Development", Snackbar.LENGTH_SHORT)
+                    .show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }
