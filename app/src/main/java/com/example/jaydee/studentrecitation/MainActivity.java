@@ -1,6 +1,7 @@
 package com.example.jaydee.studentrecitation;
 
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -30,8 +31,11 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Under Development", Snackbar.LENGTH_SHORT)
-                        .show();
+                View viewSheet = getLayoutInflater().inflate(R.layout.fab_drawer, null);
+
+                BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
+                dialog.setContentView(viewSheet);
+                dialog.show();
             }
         });
 
