@@ -1,7 +1,6 @@
 package com.example.jaydee.studentrecitation;
 
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -25,17 +24,14 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Recitation");
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                View viewSheet = getLayoutInflater().inflate(R.layout.fab_drawer, null);
-
-                BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
-                dialog.setContentView(viewSheet);
-                dialog.show();
+                onClickFabDrawer();
             }
         });
 
@@ -48,6 +44,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
+
     }
 
     @Override
@@ -75,6 +72,11 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    public void onClickFabDrawer(){
+        FabDrawer fabDrawer = new FabDrawer();
+        fabDrawer.show(getSupportFragmentManager(), "fab_drawer");
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -96,7 +98,8 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        FragmentManager fm = getSupportFragmentManager();
+        FragmentManager fm;
+        fm = getSupportFragmentManager();
 
         if (id == R.id.nav_recitation) {
             fm.beginTransaction()

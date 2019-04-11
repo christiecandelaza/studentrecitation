@@ -27,20 +27,23 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/add_new_recitation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
             android:orientation="vertical"
-            android:layout_weight="1"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp">
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:src="@drawable/ic_new_recitation"
                 android:tint="#737373" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,20 +55,23 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/add_new_student_class"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
             android:orientation="vertical"
-            android:layout_weight="1"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp">
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:src="@drawable/ic_new_class"
                 android:tint="#737373" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,7 +90,8 @@
             android:orientation="vertical"
             android:layout_weight="1"
             android:paddingBottom="8dp"
-            android:paddingTop="8dp">
+            android:paddingTop="8dp"
+            android:id="@+id/add_new_schedule">
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"

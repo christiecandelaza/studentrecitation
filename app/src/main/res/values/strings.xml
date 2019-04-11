@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Recitation</string>
+    <string name="app_name">iRecite</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="nav_header_title">Student Recitation</string>
+    <string name="nav_header_title">iRecite - Student Recitation App</string>
 
     <!-- nav drawer items -->
     <string name="nav_item_recitation">Recitation</string>
@@ -28,5 +28,10 @@
     <!-- Schedule Menus -->
     <!-- All Menus -->
     <string name="action_settings">Settings</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_save">Save</string>
+    <string name="dialog_cancel">Cancel</string>
 
 </resources>
